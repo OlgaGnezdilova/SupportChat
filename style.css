@@ -1,0 +1,49 @@
+.stApp {
+    background-color: #702283 !important; 
+    font-family: 'Arial', sans-serif !important;
+}
+
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
+    color: #efc20b !important; 
+    font-weight: bold !important;
+}
+
+div.stButton > button {
+    display: block;
+    margin: 0 auto; 
+    background-color: #FFC700 !important; 
+    color: #000000 !important; 
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important; 
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+div.stButton > button:hover {
+    background-color: #FFC700 !important; 
+}
+
+button.css-1cpxqw2:hover {
+    background-color: #000000 !important; 
+}
+
+.stApp li {
+    font-size: 22px !important;
+    color: #ffffff !important; 
+    #font-weight: bold !important;
+    margin-bottom: 24px !important; 
+    line-height: 1.2 !important; 
+}
+
+input, .stTextInput>div>div>input {
+    background-color: #EEE !important;
+    color: #000000 !important;
+    border-radius: 5px !important;
+}
+
+.stContainer {
+    background-color: rgba(255, 255, 255, 0.1) !important; 
+    border-radius: 10px !important;
+    padding: 20px !important;
+}
