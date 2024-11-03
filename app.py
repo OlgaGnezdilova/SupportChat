@@ -1,11 +1,13 @@
 import streamlit as st
-from openai import OpenAI
 import os
+from openai import OpenAI
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 from dotenv import load_dotenv
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 try:
     with open("style.css") as css_file:
@@ -19,14 +21,9 @@ def ask_question(question):
         A client has shared the following belief: "{question}". 
         Please provide 5 alternative, healthier beliefs in a confident, affirmative form, each one written as a statement, not a question. 
         Respond in the same language as the question and avoid using question marks."""
-
-
-        response = client.chat.completions.create(
-            model="gpt-4",
-            messages=[{"role": "system", "content": initial_prompt}],
-            max_tokens=300
-        )
-
+        response = client.chat.completions.create(model="gpt-4",
+        messages=[{"role": "system", "content": initial_prompt}],
+        max_tokens=300)
         answer = response.choices[0].message.content.strip()
         return answer
     except Exception as e:
@@ -51,6 +48,6 @@ if st.button("Get support"):
     else:
         st.write("Please enter a valid belief")
 
-   
+
 
 
