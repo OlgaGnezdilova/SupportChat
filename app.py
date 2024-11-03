@@ -30,7 +30,9 @@ def ask_question(question):
         return f"An error occurred: {str(e)}"
 
 st.markdown("<h1 style='text-align: center;'>Dark thought? Share it with me!</h1>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: left;'>This app functions as an experienced Cognitive Behavioral Therapyst. Just share your troubles with it and enjoy alternative perspectives</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>This app functions as an experienced</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>Cognitive Behavioral Therapyst</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>Share your troubles and enjoy alternative perspectives</h4>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Enter your belief here</h3>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Feel free to use your native language</h3>", unsafe_allow_html=True)
 
