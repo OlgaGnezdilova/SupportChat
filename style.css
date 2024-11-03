@@ -1,49 +1,53 @@
 .stApp {
     background-image: url('https://images.unsplash.com/photo-1504711022896-0ad97c97601a?q=80&w=1353&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Замените 'path/to/your/image.jpg' на путь к вашему фото */
     background-size: cover;
-    background-position: center;
+    background-position: left;
     font-family: 'Arial', sans-serif !important;
-    color: #000000 !important; /* Чёрный цвет для текста */
+    color: #000000 !important; 
 }
 
 .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
-    color: #000000 !important; /* Чёрный цвет для заголовков */
+    color: #000000 !important; 
     font-weight: bold !important;
 }
 
 div.stButton > button {
     display: block;
     margin: 0 auto;
-    background-color: #FFFFFF !important; /* Белый цвет для кнопок */
-    color: #000000 !important; /* Чёрный цвет текста на кнопках */
-    border: 1px solid #000000 !important; /* Чёрная рамка для кнопок */
+    background-color: #fa871c !important; 
+    color: #000000 !important; 
+    border: 1px solid #000000 !important; 
     border-radius: 8px !important;
     padding: 10px 20px !important;
     font-weight: bold !important;
     font-size: 16px !important;
 }
 
-div.stButton > button:hover {
-    background-color: #f0f0f0 !important; /* Более светлый оттенок при наведении */
-    color: #000000 !important;
-}
-
 .stApp li {
     font-size: 22px !important;
-    color: #000000 !important; /* Чёрный цвет для текста в списках */
+    color: #000000 !important; 
     margin-bottom: 24px !important;
     line-height: 1.2 !important;
 }
 
 input, .stTextInput>div>div>input {
-    background-color: #FFFFFF !important;
+    background-color: #ffffff !important;
     color: #000000 !important;
     border-radius: 5px !important;
-    border: 1px solid #000000 !important; /* Чёрная рамка для полей ввода */
+    border: 1px solid #000000 !important; 
 }
 
+input:invalid, .stTextInput>div>div>input:invalid {
+    border-color: #000000 !important; 
+}
+
+input:focus, .stTextInput>div>div>input:focus {
+    outline: none !important;
+    border-color: #000000 !important; 
+
 .stContainer {
-    background-color: rgba(255, 255, 255, 0.8) !important; /* Белый фон с прозрачностью для контейнера */
+    background-color: #ffffff !important;
     border-radius: 10px !important;
+    border: 1px solid #000000 !important; 
     padding: 20px !important;
 }

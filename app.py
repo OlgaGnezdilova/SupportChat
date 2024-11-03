@@ -37,7 +37,7 @@ st.markdown("<h4 style='text-align: left;'>This app functions as an experienced 
 st.markdown("<h3 style='text-align: center;'>Enter your belief here</h3>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Feel free to use your native language</h3>", unsafe_allow_html=True)
 
-question = st.text_input("")
+question = st.text_input("Enter your belief here", label_visibility="collapsed", placeholder="")
 
 if st.button("Get support"):
     if question:
@@ -46,8 +46,8 @@ if st.button("Get support"):
         st.subheader("Here are some alternative thoughts:")
         st.write(answer)
         st.subheader("")
-        st.subheader("Which of these alternative thoughts supports you more on your journey?") 
-        st.subheader("Repeate it one more time to support yourself")
+        st.markdown("<h3 style='text-align: center;'>Which of these alternative thoughts supports you more on your journey?</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center;'>Repeate it one more time to support yourself!</h3>", unsafe_allow_html=True)
     else:
         st.write("Please enter a valid belief")
 
