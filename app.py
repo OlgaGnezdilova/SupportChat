@@ -3,9 +3,6 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
-if "show_buttons" not in st.session_state:
-    st.session_state["show_buttons"] = False
-
 load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -20,7 +17,9 @@ def ask_question(question):
     try:
         initial_prompt = f"""You are an experienced Cognitive Behavioral Therapy (CBT) therapist. 
         A client has shared the following belief: "{question}". 
-        Offer 5 alternative, healthier beliefs that challenge this original belief."""
+        Please provide 5 alternative, healthier beliefs in a confident, affirmative form, each one written as a statement, not a question. 
+        Respond in the same language as the question and avoid using question marks."""
+
 
         response = client.chat.completions.create(
             model="gpt-4",
@@ -35,7 +34,8 @@ def ask_question(question):
 
 st.markdown("<h1 style='text-align: center;'>Dark thought? Share it with me!</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: left;'>This app functions as an experienced Cognitive Behavioral Therapyst. Just share your troubles with it and enjoy alternative perspectives</h4>", unsafe_allow_html=True)
-st.subheader("Enter your belief here:")
+st.markdown("<h3 style='text-align: center;'>Enter your belief here</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Feel free to use your native language</h3>", unsafe_allow_html=True)
 
 question = st.text_input("")
 
@@ -46,23 +46,11 @@ if st.button("Get support"):
         st.subheader("Here are some alternative thoughts:")
         st.write(answer)
         st.subheader("")
-        st.subheader("Which of these alternative thoughts supports you more on your journey?")
+        st.subheader("Which of these alternative thoughts supports you more on your journey?") 
+        st.subheader("Repeate it one more time to support yourself")
     else:
         st.write("Please enter a valid belief")
 
-    if st.session_state["show_buttons"]:
-        col1, col2, col3, col4, col5 = st.columns(5)
-        if col1.button("1"):
-            st.markdown("<h4 style='text-align: center;'>Repeat the alternative one more time and good luck!</h4>", unsafe_allow_html=True)
-        elif col2.button("2"):
-            st.markdown("<h4 style='text-align: center;'>Repeat the alternative one more time and good luck!</h4>", unsafe_allow_html=True)
-        elif col3.button("3"):
-            st.markdown("<h4 style='text-align: center;'>Repeat the alternative one more time and good luck!</h4>", unsafe_allow_html=True)
-        elif col4.button("4"):
-            st.markdown("<h4 style='text-align: center;'>Repeat the alternative one more time and good luck!</h4>", unsafe_allow_html=True)
-        elif col5.button("5"):
-            st.markdown("<h4 style='text-align: center;'>Repeat the alternative one more time and good luck!</h4>", unsafe_allow_html=True)
-
-
+   
 
 
