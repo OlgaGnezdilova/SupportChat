@@ -1,4 +1,4 @@
-# Cognitive Behavioral Therapy (CBT) Support Chat Application
+# Support Chat (AI)
 
 ### Overview
 This application leverages Cognitive Behavioral Therapy (CBT) principles, a scientifically validated approach used in psychology to address irrational or unhelpful thoughts. The cognitive approach assumes that psychological challenges often stem from irrational or ineffective thought patterns, which can be changed to positively influence emotions and behaviors. In moments of distress or catastrophizing thoughts, it’s crucial to voice or write down alternative, positive perspectives, often in a CBT journal. This app is designed to support individuals who may find it challenging to shift to a positive mindset in tough times.
